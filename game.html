@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Robot Maze Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="robot">🤖</div>
+
+<h2>🎮 Robot Maze Challenge</h2>
+
+<p>Help the robot reach the star ⭐</p>
+
+<div style="font-size:40px;" id="robot">🤖</div>
+<div style="font-size:40px; position:absolute; right:100px;">⭐</div>
+
+<br>
+
+<button onclick="move('up')">⬆️</button>
+<button onclick="move('down')">⬇️</button>
+<button onclick="move('left')">⬅️</button>
+<button onclick="move('right')">➡️</button>
+
+<br><br>
+
+<p id="gameMsg"></p>
+
+<br>
+<button onclick="location.href='index.html'">🏠 Home</button>
+
+<script>
+let x = 0;
+let y = 0;
+
+function move(dir) {
+  let robot = document.getElementById("robot");
+
+  if (dir === "right") x += 20;
+  if (dir === "left") x -= 20;
+  if (dir === "up") y -= 20;
+  if (dir === "down") y += 20;
+
+  robot.style.transform = `translate(${x}px, ${y}px)`;
+
+  if (x > 200) {
+    document.getElementById("gameMsg").innerText =
+      "🎉 You reached the star! Great job!";
+  }
+}
+</script>
+
+</body>
+</html>

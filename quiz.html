@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Robotics Quiz</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="robot">🤖</div>
+
+<div class="quiz-card">
+
+  <h2 id="question">Loading...</h2>
+
+  <div id="options"></div>
+
+  <p class="feedback" id="feedback"></p>
+
+  <button id="nextBtn" onclick="nextQuestion()" disabled>Next ➡️</button>
+
+  <h3>Score: <span id="score">0</span></h3>
+
+</div>
+
+<!-- Popup -->
+<div id="popup" class="popup hidden">
+  <div class="popup-content">
+    <h2>🎉 Great Job Little Engineer!</h2>
+    <button onclick="goHome()">Go Home 🏠</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
