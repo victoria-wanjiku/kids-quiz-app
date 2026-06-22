@@ -10,10 +10,8 @@
 
 <h2>🎮 Robot Maze Challenge</h2>
 
-<p>Help the robot reach the star ⭐</p>
 
 <div style="font-size:40px;" id="robot">🤖</div>
-<div style="font-size:40px; position:absolute; right:100px;">⭐</div>
 
 <br>
 
@@ -42,11 +40,6 @@ function move(dir) {
   if (dir === "down") y += 20;
 
   robot.style.transform = `translate(${x}px, ${y}px)`;
-
-  if (x > 200) {
-    document.getElementById("gameMsg").innerText =
-      "🎉 You reached the star! Great job!";
-  }
 }
 </script>
 
